@@ -4,6 +4,9 @@
   </head>
   <body>
     <h1>Basic OAuth example using implicit flow</h1>
+	  
+	  <button onclick="myFacebook()">Facebook Info</button>
+	  <button onclick="myGoogle()">Google Info</button>
 
     <script>
       // This is an example of a SPA (Single Page App) with OAuth authentication
@@ -11,9 +14,11 @@
       // For simplicity, we are using the "Implicit" flow, which means the 
       // access_token is part of the URL being sent to the application
       //
+	    function myFacebook() {
       // - Step 1 -
       // if page doesn't include access token, we need to authroize
       //
+	    
       if (!document.location.href.includes('access_token')) {
 	  //
 	  // Many apps would display a "Login" button to alert users that
@@ -82,7 +87,7 @@
 	  userpic.src = myJson.picture.data.url;
 	  document.body.append(userpic);
       });
-      
+	    }
       
     </script>
   </body>
